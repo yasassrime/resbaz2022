@@ -1,8 +1,8 @@
 ---
-title: "Your awesome project title"
+title: "Designing Multiplayer Location-Based Augmented Reality Games that Make Use of the Real-World"
 author:
-  name: "You et al"
-  affiliation: "From whence you hail"
+  name: "Yasas Sri Wickramasinghe"
+  affiliation: "HIT Lab NZ, University of Canterbury"
 date: today
 bibliography: refs.bib
 from: markdown+emoji

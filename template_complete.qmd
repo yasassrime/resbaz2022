@@ -1,8 +1,8 @@
 ---
-title: "Example"
+title: "Designing Multiplayer Location-Based Augmented Reality Games that Make Use of the Real-World"
 author:
-  name: "Quinn Asena"
-  affiliation: "UW-Madison (Formaly University of Auckland)"
+  name: "Yasas Sri Wickramasinghe"
+  affiliation: "HIT Lab NZ, University of Canterbury"
 date: today
 format:
   html:
@@ -16,11 +16,7 @@ theme:
 
 # Introduction
 
-This template is designed to accompany the slide deck and to include most of the features you will need for hosting a collaborative research project. I've included a few extras that I find handy (e.g., YAML entries, and check out the plot loop!). Every research project needs to be taylored towards your preferred workflow, collaborators, data, data privacy, and the list goes on.
-
-Some things are the same across projects like well commented code and a well documented version control history. I use documents like this (previously in Rmarkdown) to share results easily with a link hosted on GitHub. 
-
-This complete template has a structure that many projects roughly follow from intro inforation to colaborators through some data wrangling and visualisations.You can replace ths intro (and following sub-section) with a summary of your project and any useful links, references and content you desire.
+Location-based augmented reality games (LBARGs) hold the potential to foster physical activity, enhance social engagement, and boost self-esteem. However, most of the existing LBARGs are limited to a specific location or do not promote real-time remote gameplay. Nevertheless, what if the LBGs can expand their scope further by utilising the characteristics of gameplay locations within the game and allowing distributed synchronous gameplay possible? This direction motivates us to explore LBGs, and further understand game engagement, presence, and immersion. Therefore, our exhibit presents a novel game design addressing these limitations and unveils a unique way of connecting multiple co- located players with multiple remote players and their spaces using augmented reality (AR) windows. Moreover, this game design helps us understand the limitations of current LBARGs by pushing their boundaries and improving the way real-world environments are integrated into gameplay.
 
 ## A note on project structure
 
