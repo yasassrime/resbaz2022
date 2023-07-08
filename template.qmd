@@ -10,68 +10,67 @@ format:
   html:
     code-fold: false
     link-external-newwindow: true
+    toc: true
 theme:
   light: flatly
   dark: darkly
 ---
 
-:::{.callout-tip}
+::: callout-tip
 # YAML exercise
-- Fill the `title: ` and `name: ` and `affiliation: ` fieds.
 
-  - a couple of handy entries are already completed
+-   Fill the `title:` and `name:` and `affiliation:` fieds.
 
-  - the existing field: `date: today` will automatically generate today's date (cool huh?  ͡▀̿ ̿ ͜ʖ ͡▀̿ ̿ )
+    -   a couple of handy entries are already completed
 
-- Add a table of contents following the [guide](https://quarto.org/docs/output-formats/html-basics.html)
+    -   the existing field: `date: today` will automatically generate today's date (cool huh? ͡▀̿ ̿ ͜ʖ ͡▀̿ ̿ )
 
-- Remove this callout block and render the document
+-   Add a table of contents following the [guide](https://quarto.org/docs/output-formats/html-basics.html)
 
-- Give me a :heavy_check_mark: when done or a :hand: if you need help
+-   Remove this callout block and render the document
+
+-   Give me a :heavy_check_mark: when done or a :hand: if you need help
 :::
 
 # Introduction
 
-:::{.callout-tip}
+::: callout-tip
 # Markdown exercise
 
-- Check out [Quarto's markdown guide](https://quarto.org/docs/authoring/markdown-basics.html)
+-   Check out [Quarto's markdown guide](https://quarto.org/docs/authoring/markdown-basics.html)
 
-- and the [biostats guide to writing (equations section)](https://biostats-r.github.io/biostats/quarto/04-figures-tables.html#equations)
+-   and the [biostats guide to writing (equations section)](https://biostats-r.github.io/biostats/quarto/04-figures-tables.html#equations)
 
 In the template Introduction section take 3-4 minutes to write:
 
-- a sub-heading under the introduction
+-   a sub-heading under the introduction
 
-- a list
+-   a list
 
-- and an equation (inline or as a block)
+-   and an equation (inline or as a block)
 
-- cite one of the articles in in existing `.bib` file using the `@`
+-   cite one of the articles in in existing `.bib` file using the `@`
 
-- remove this callout and render the document and hit the :heavy_check_mark: in zoom
+-   remove this callout and render the document and hit the :heavy_check_mark: in zoom
 :::
 
 # Libraries {.unnumbered .unlisted}
 
 Generally it is good practice to include a list of packages you use up front. But you may not need to show them in the output or list them in the table of contents. The `{.unnumbered .unlisted}` commands following the heading remove this section from the table of contents but it will remain in the text. Quarto accepts multiple coding languages, the following example uses R. I have set up working R code chunks so that for this tutorial you do not need to be familiar with R. Here, we will experiment with a few code [execution options](https://quarto.org/docs/computations/execution-options.html).
 
-
 If you want to use Python code check out the documentation [here](https://quarto.org/docs/computations/python.html#overview).
 
-
-:::{.callout-tip}
+::: callout-tip
 # Code block exercise
 
-- Check out the [Block options](https://quarto.org/docs/computations/execution-options.html) and edit (and add to) the existing code block options below to:
+-   Check out the [Block options](https://quarto.org/docs/computations/execution-options.html) and edit (and add to) the existing code block options below to:
 
- - exclude the results, messages and warnings
+-   exclude the results, messages and warnings
 
- - exclude the code from the HTML output (make sure it still evaluates!)
+-   exclude the code from the HTML output (make sure it still evaluates!)
 
- - render the document and hit the :heavy_check_mark: in zoom
+-   render the document and hit the :heavy_check_mark: in zoom
 :::
-
 
 ```{r Libraries}
 #| include: true
@@ -82,51 +81,50 @@ pacman::p_load(ggplot2, palmerpenguins)    # Install & load packages
 
 # Tabsets
 
-:::{.callout-tip}
+::: callout-tip
 # Tabset exercise
 
-- Check out the [tabset panel documentation](https://quarto.org/docs/interactive/layout.html#tabset-panel)
+-   Check out the [tabset panel documentation](https://quarto.org/docs/interactive/layout.html#tabset-panel)
 
-- Create a tabset with three tabs in the template under the Tabsets heading
+-   Create a tabset with three tabs in the template under the Tabsets heading
 
-  - Does not matter what they contain but feel free to blurb something in there
+    -   Does not matter what they contain but feel free to blurb something in there
 
-- render the document and hit the :heavy_check_mark: in zoom
+-   render the document and hit the :heavy_check_mark: in zoom
 :::
 
 # Images
 
-:::{.callout-tip}
+::: callout-tip
 # Images exercise
 
-- There is a (royalty free) XKCD comic inside the images directory in the repo. [Check out the guide](https://quarto.org/docs/authoring/figures.html), and insert the image into one of the tabsets you just created.
+-   There is a (royalty free) XKCD comic inside the images directory in the repo. [Check out the guide](https://quarto.org/docs/authoring/figures.html), and insert the image into one of the tabsets you just created.
 
-- render the document and hit the :heavy_check_mark: in zoom
+-   render the document and hit the :heavy_check_mark: in zoom
 :::
-
 
 # let'g go Git it
 
 You're now ready to host your first live link!
 
-:::{.callout-tip}
+::: callout-tip
 # GitHub
 
-- Render your project so that most recent changes are exported
+-   Render your project so that most recent changes are exported
 
-- In the source control on the left commit and push your changes
- 
-  - You can do this however you prefer, commandline, GUI, source control...
+-   In the source control on the left commit and push your changes
 
-- Head over to GitHub in your browser and go:
+    -   You can do this however you prefer, commandline, GUI, source control...
 
-  - Settings -> GitHub pages -> enable github pages
+-   Head over to GitHub in your browser and go:
 
-- By default, your link will be hosted at: https://githubusername.github.io/reponame/pathtodocument.html
+    -   Settings -\> GitHub pages -\> enable github pages
 
-  - The repo can remain private but anyone who has the link can view it.
+-   By default, your link will be hosted at: https://githubusername.github.io/reponame/pathtodocument.html
 
-- Find your hosted template link and share with the world!
+    -   The repo can remain private but anyone who has the link can view it.
+
+-   Find your hosted template link and share with the world!
 :::
 
 # References

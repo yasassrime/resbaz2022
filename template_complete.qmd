@@ -3,6 +3,7 @@ title: "Designing Multiplayer Location-Based Augmented Reality Games that Make U
 author:
   name: "Yasas Sri Wickramasinghe"
   affiliation: "HIT Lab NZ, University of Canterbury"
+  email: "yasas.wickramasinghe@pg.canterbury.ac.nz"
 date: today
 format:
   html:
@@ -16,25 +17,27 @@ theme:
 
 # Introduction
 
-Location-based augmented reality games (LBARGs) hold the potential to foster physical activity, enhance social engagement, and boost self-esteem. However, most of the existing LBARGs are limited to a specific location or do not promote real-time remote gameplay. Nevertheless, what if the LBGs can expand their scope further by utilising the characteristics of gameplay locations within the game and allowing distributed synchronous gameplay possible? This direction motivates us to explore LBGs, and further understand game engagement, presence, and immersion. Therefore, our exhibit presents a novel game design addressing these limitations and unveils a unique way of connecting multiple co- located players with multiple remote players and their spaces using augmented reality (AR) windows. Moreover, this game design helps us understand the limitations of current LBARGs by pushing their boundaries and improving the way real-world environments are integrated into gameplay.
+![Project Image](images/Project Image.jpg)
+
+Location-based augmented reality games (LBARGs) hold the potential to foster physical activity, enhance social engagement, and boost self-esteem. However most of the existing LBARGs are limited to a specific location or do not promote real-time remote gameplay. Nevertheless, what if the LBGs can expand their scope further by utilising the characteristics of gameplay locations within the game and allowing distributed synchronous gameplay possible? This direction motivates us to explore LBGs, and further understand game engagement, presence, and immersion. Therefore, our exhibit presents a novel game design addressing these limitations and unveils a unique way of connecting multiple co- located players with multiple remote players and their spaces using augmented reality (AR) windows. Moreover, this game design helps us understand the limitations of current LBARGs by pushing their boundaries and improving the way real-world environments are integrated into gameplay.
 
 ## A note on project structure
 
 Today, we have cloned an existing project structure. It is important that you create a project structure that works for your particular case. A general framework is to create a primary directory that is your repo and contains your `.qmd` script, and sub directories for data, outputs.
 
-- /primary_directory
+-   /primary_directory
 
-  - script.qmd
+    -   script.qmd
 
-  - .git, .gitignore
+    -   .git, .gitignore
 
-  - /data
+    -   /data
 
-    - data.csv
+        -   data.csv
 
-  - /outputs
+    -   /outputs
 
-    - results
+        -   results
 
 Plenty of tools exist for reproducibility (such as the `renv` package to record package versions used in your project).
 
@@ -60,7 +63,6 @@ I'm here in spirit, code will still be executed.
 
 Typically you need to do some tidying of your data. Each project will have different reqirements e.g., transforming data or generating new datasets. You probably want to dedicate a section just for wrangling but may want to hide it from the output. See [R for Data Science](https://r4ds.had.co.nz/introduction.html) for more info.
 
-
 # Visualisations {.tabset}
 
 Sometimes I have a lot of plots (like, a lot!). Perhaps generated from a loop that outputs a list of related plots. It is possible to programatically generate panel tabsets rather that repeatedly writing out the heading `#` and inserting the plot (e.g., `plot_list[[1]]`). As an example, I've grabbed a couple of plots from [Alison Horst](https://allisonhorst.github.io/palmerpenguins/articles/examples.html) again.
@@ -83,7 +85,7 @@ headings <- names(plot_list)
 
 The code might be a little complicated but useful to reduce the length and manual work if you have a lot of outputs.
 
-:::{.panel-tabset}
+::: panel-tabset
 ```{r, results='asis'}
 #| warning: false
 
@@ -96,15 +98,47 @@ for (i in seq_along(plot_list)) {
 ```
 :::
 
+```{python}
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = pd.read_csv("az.csv")
+mean_values = data.groupby("Mode").mean()
+
+game_modes = ["Tabletop", "Overlay", "Window"]
+spes_items = ["SL1", "SL2", "SL3", "SL4", "PA1", "PA2", "PA3", "PA4"]
+x = range(len(spes_items))
+width = 0.2
+
+fig, ax = plt.subplots()
+
+for i, mode in enumerate(game_modes):
+    ax.bar([val + width*i for val in x], mean_values.loc[i+1], width, label=mode)
+
+ax.set_xticks([val + width for val in x])
+ax.set_xticklabels(spes_items)
+ax.set_xlabel("SPES Items")
+ax.set_ylabel("Mean")
+ax.set_title("Comparison of Game Modes")
+ax.legend()
+
+plt.tight_layout()
+plt.show()
+
+```
+
 # To do
 
 I sometimes keep a project to-do list here
 
-- [x] Get up
+-   [x] Get up
 
-- [x] Put on pants
+-   [x] Put on pants
 
-- [ ] Present workshop
+-   [ ] Present workshop
 
 # Final remarks
 
